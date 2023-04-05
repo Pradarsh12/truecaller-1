@@ -17,7 +17,7 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     client.send_message(chat_id=message.chat.id,
-                        text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Latest Movies & Webseries \n @HindiXstream",reply_markup=InlineKeyboardMarkup(
+                        text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Latest updates\n @mittalbots",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]))
     check_status = check(message.chat.id)
@@ -26,25 +26,25 @@ def start(client, message):
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+        callback_query.message.edit(text=f"`Channel` : [MITTAL BOTS](t.me/mittalbots)\n`Creator :` [P⃠r⃠a⃠d⃠a⃠r⃠s⃠h⃠](t.me/soonbotmaker0)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Give Feedback", url="t.me/kamlesh_kirodewal")]]))
+            [[InlineKeyboardButton("Give Feedback", url="t.me/soonbotmaker0")]]))
     elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
+        callback_query.message.edit(text="Enjoy...:-D\nhttps://t.me/mittalbots", disable_web_page_preview=True)
 
 
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+                        text=f"`Channel` : [MITTAL BOTS](t.me/mittalbots)\n`Creator :` [P⃠r⃠a⃠d⃠a⃠r⃠s⃠h⃠](t.me/soonbotmaker0)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Feedback", url="t.me/kamlesh/kirodewal")]]))
+            [[InlineKeyboardButton("Feedback", url="t.me/soonbotmaker0")]]))
 
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
-    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[FilesToVideo](https://t.me/filestovideobot)\n [Miss Tina](https://t.me/Miss_Tinabot)\n [Filter Bot](https://t.me/filter_mfmixwebbot)\n [Url Uploader](https://t.me/uploader_mfmixbot)\n [MfMixWeb Bot](https://t.me/mfmixweb_bot)\n [TG 2 YouTube](https://t.me/youtube99_bot)\n [Movie Request](https://t.me/request_moviebot)",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal")]]))
+    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[OTHER BOTS](https://t.me/mittalbots )\n [Rename bot ](https://t.me/File_rename_v1_bot)\n [Web Downloader Bot](https://t.me/Web_downloader_mbot)\n [UNZIP BOT](https://t.me/Un_zip_file_bot)\n [Auto broadcast bot ](https://t.me/Auto_broadcast_v1_bot)\n [ALL BOT OWNER](https://t.me/soonbotmaker0)\n [Bot Update](https://t.me/mittalbots)",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/soonbotmaker0")]]))
     
     
 @app.on_message(filters.command(["log"]))
